@@ -10,6 +10,7 @@ To your [.pre-commit-config.yaml](https://pre-commit.com/#2-add-a-pre-commit-con
   rev: master
   hooks:
     - id: export-requirements
+    - id: export-requirements-dev
 ```
 
 This will export two files: `requirements.txt`, with only the main dependencies, and `requirements-dev.txt` with the dev dependencies included.
