@@ -1,0 +1,8 @@
+- id: export-requirements
+  name: Convert pyproject.toml to requirements.txt
+  description: Generate requirements.txt pyproject.toml for backwards compatibility using 'dephell'.
+  language: system
+  entry: poetry export -f requirements.txt > requirements.txt \
+    && poetry export --dev -f requirements.txt > requirements-dev.txt
+  files: "^pyproject.toml$"
+  pass_filenames: false
